@@ -1,5 +1,6 @@
-from cv2 import imread
 from os.path import isfile
+
+from cv2 import imread
 from keras.datasets import mnist
 from keras.layers import Dense, Flatten
 from keras.models import Sequential
@@ -8,7 +9,6 @@ from numpy import invert, array, argmax
 
 MODEL_TARGET_FILENAME: str = "handwritten_digit_recognition"
 TRAINING_EPOCHS: int = 4  # careful not to overfit
-
 
 if __name__ == '__main__':
     (data, d_label), (test, t_label) = mnist.load_data()
